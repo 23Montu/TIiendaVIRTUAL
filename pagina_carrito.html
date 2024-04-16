@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <style>
+        /* Estilos básicos para el diseño */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .producto {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .producto img {
+            width: 100px;
+            margin-right: 20px;
+        }
+        .producto-info {
+            flex: 1;
+        }
+        .eliminar {
+            color: red;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Carrito de Compras</h2>
+        <!-- Producto 1 -->
+        <div class="producto">
+            <img src="Imagenes/nb.png" alt="Producto 1">
+            <div class="producto-info">
+                <h3>New Balance</h3>
+                <p>Precio: $215.000</p>
+            </div>
+            <div class="eliminar" onclick="eliminarProducto(this)">Eliminar</div>
+        </div>
+        <!-- Producto 2 -->
+        <div class="producto">
+            <img src="Imagenes/panda.png" alt="Producto 2">
+            <div class="producto-info">
+                <h3>Nike Dunk Low Panda</h3>
+                <p>Precio: $200.000</p>
+            </div>
+            <div class="eliminar" onclick="eliminarProducto(this)">Eliminar</div>
+        </div>
+        <!-- Producto 3 -->
+        <div class="producto">
+            <img src="Imagenes/travis.png" alt="Producto 3">
+            <div class="producto-info">
+                <h3>Nike Travis Scott</h3>
+                <p>Precio: $230.000</p>
+            </div>
+            <div class="eliminar" onclick="eliminarProducto(this)">Eliminar</div>
+        </div>
+        <!-- Total del carrito -->
+        <h3>Total: $155.00</h3>
+    </div>
+
+    <!-- Script para eliminar productos del carrito -->
+    <script>
+        function eliminarProducto(elemento) {
+            elemento.parentElement.remove(); // Eliminar el div del producto
+            actualizarTotal(); // Actualizar el total del carrito
+        }
+
+        function actualizarTotal() {
+            var productos = document.querySelectorAll('.producto');
+            var total = 0;
+            productos.forEach(function(producto) {
+                var precioTexto = producto.querySelector('p').textContent;
+                var precio = parseFloat(precioTexto.replace('Precio: $', ''));
+                total += precio;
+            });
+            document.querySelector('h3:last-of-type').textContent = 'Total: $' + total.toFixed(2);
+        }
+    </script>
+</body>
+</html>
