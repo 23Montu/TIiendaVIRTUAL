@@ -18,7 +18,7 @@
         h1 {
             text-align: center; /* Centrar el texto */
             font: bold 36px Arial, sans-serif; /* Estilo de fuente */
-            color: #fff; /* Color del texto */
+            color: #ffffff; /* Color del texto */
             margin: 0; /* Eliminar el margen superior e inferior del título */
             flex: 1; /* Ocupar todo el espacio restante */
         }
@@ -41,15 +41,19 @@
         }
 
         .boton-imagen {
-            display: inline-block; /* Convertir a bloque en línea */
-            vertical-align: middle; /* Alinear verticalmente */
+            background-color: transparent; /* Color de fondo transparente */
+            border: none; /* Eliminar borde */
             cursor: pointer; /* Cambiar cursor al pasar sobre la imagen */
         }
 
-        .icono-instagram {
+        .icono-instagram,
+        .icono-facebook,
+        .icono-whatsapp,
+        .icono-carrito {
             color: #fff; /* Color del icono */
             font-size: 24px; /* Tamaño del icono */
             cursor: pointer; /* Cambiar cursor al pasar sobre el icono */
+            margin-right: 10px; /* Espacio derecho entre iconos */
         }
 
         .botones-container {
@@ -97,7 +101,10 @@
 <body>
     <header>
         <h1><a href="pagina_principal.html" class="boton">BM</a></h1>
-        <i class="fab fa-instagram icono-instagram"></i> <!-- Icono de Instagram -->
+        <button class="boton-imagen icono-instagram"><i class="fab fa-instagram"></i></button> <!-- Icono de Instagram -->
+        <button class="boton-imagen icono-facebook"><i class="fab fa-facebook-square"></i></button> <!-- Icono de Facebook -->
+        <button class="boton-imagen icono-whatsapp"><i class="fab fa-whatsapp-square"></i></button> <!-- Icono de WhatsApp -->
+        <button class="boton-imagen icono-carrito"><i class="fas fa-shopping-cart"></i></button> <!-- Icono de Carrito de Compras -->
     </header>
 
     <!-- Botones "Zapatos" y "Camisetas" -->
@@ -110,8 +117,6 @@
     </div>
 
     <!-- Imagen botón -->
-
-    
     <div class="botones-imagenes">
         <a href="jordan1.html" class="boton-imagen">
             <img src="imagenes/jordan1.jpg" alt="Jordan" width="432" height="598">
@@ -133,17 +138,15 @@
         <a href="new.html" class="boton-imagen nb">
             <img src="imagenes/nb.png" alt="new" width="224" height="299">
             <span class="new-text">New Balance</span>
-
         </a>
         <a href="panda.html" class="boton-imagen nb">
             <img src="imagenes/panda.png" alt="panda" width="224" height="299">
             <span class="new-text">Panda</span>
         </a>
-    </a>
-    <a href="travis.html" class="boton-imagen nb">
-        <img src="imagenes/travis.png" alt="travis" width="224" height="299">
-        <span class="new-text">Travis</span>
-    </a>
+        <a href="travis.html" class="boton-imagen nb">
+            <img src="imagenes/travis.png" alt="travis" width="224" height="299">
+            <span class="new-text">Travis</span>
+        </a>
     </div>
 </body>
 </html>
