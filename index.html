@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BigMike</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Agregar enlace al archivo CSS de Font Awesome -->
+    <!-- Agregar enlace al archivo CSS de Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         /* Tu estilo CSS aquí */
     </style>
@@ -16,34 +18,74 @@
     </header>
 
     <!-- Botones y enlaces -->
-    <div class="botones-container">
-        <!-- Botones -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <a href="pagina_novedades.html" class="btn btn-primary">Novedades</a>
+                <a href="pagina_marcas.html" class="btn btn-primary">Marcas</a>
+                <a href="pagina_zapatos.html" class="btn btn-primary">Zapatos</a>
+                <a href="pagina_camisetas.html" class="btn btn-primary">Camisetas</a>
+                <a href="pagina_rebajas.html" class="btn btn-primary">Rebajas</a>
+                <a href="pagina_promociones.html" class="btn btn-primary">Promociones</a>
+                <a href="pagina_exclusivos.html" class="btn btn-primary">Exclusivos</a>
+            </div>
+        </div>
     </div>
 
     <!-- Imagen botón -->
-    <div class="botones-imagenes">
-        <!-- Imágenes -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="jordan1.html">
+                    <img src="imagenes/jordan1.jpg" alt="Jordan" class="img-fluid">
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="camisetas1.html">
+                    <img src="imagenes/camisetas1.jpg" alt="Camisetas" class="img-fluid">
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="dunk.html">
+                    <img src="imagenes/dunk.jpg" alt="Dunk" class="img-fluid">
+                </a>
+            </div>
+        </div>
     </div>
 
     <!-- Imágenes adicionales debajo -->
-    <div class="botones-imagenes">
-        <!-- Otras imágenes -->
-        <a href="retro.html" class="boton-imagen nb">
-            <img src="imagenes/af1.jpg" alt="Nike" width="150" height="200">
-            <span class="new-text">Jordan</span>
-        </a>
-        <a href="new.html" class="boton-imagen nb">
-            <img src="imagenes/nb.png" alt="new" width="150" height="200">
-            <span class="new-text">New Balance</span>
-        </a>
-        <a href="panda.html" class="boton-imagen nb">
-            <img src="imagenes/panda.png" alt="panda" width="150" height="200">
-            <span class="new-text">Panda</span>
-        </a>
-        <a href="travis.html" class="boton-imagen nb">
-            <img src="imagenes/travis.png" alt="travis" width="150" height="200">
-            <span class="new-text">Travis</span>
-        </a>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <a href="retro.html" class="btn btn-secondary">
+                    <img src="imagenes/af1.jpg" alt="Nike" class="img-fluid">
+                    <span class="new-text">Jordan</span>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="new.html" class="btn btn-secondary">
+                    <img src="imagenes/nb.png" alt="new" class="img-fluid">
+                    <span class="new-text">New Balance</span>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="panda.html" class="btn btn-secondary">
+                    <img src="imagenes/panda.png" alt="panda" class="img-fluid">
+                    <span class="new-text">Panda</span>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="travis.html" class="btn btn-secondary">
+                    <img src="imagenes/travis.png" alt="travis" class="img-fluid">
+                    <span class="new-text">Travis</span>
+                </a>
+            </div>
+        </div>
     </div>
+
+    <!-- Agregar el script de Bootstrap al final del cuerpo del documento -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
